@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+ARCHIVO: foto.html
+Página de detalles de una foto
+
+AUTORES: Daniel Giménez el 28/09/2021
+
+REVISIONES:
+-->
+<html lang="es">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="generator" content="Visual Studio Code">
+		<meta name="author" content="Daniel Giménez">
+		<meta name="keywords" content="Foto, detalle, información">
+        <meta name="description" content="Detalles de la foto.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Foto - PI - Pictures &amp; Images</title>
+        <!--Icono-->
+		<link rel="icon" href="img/logo.png">
+        <!--CSS-->
+        <link rel="stylesheet" href="css/css/estilo.css" switch="css/css/estilo.css"  id="default"> 
+        <link rel="stylesheet" href="css/css/impresa.css" media="print" id="print">
+        <link rel="stylesheet" switch="css/css/noche.css"  id="night">
+	    <link rel="stylesheet" switch="css/css/contraste-bajo.css"  id="low">
+	    <link rel="stylesheet" switch="css/css/contraste-x-grande.css"  id="con_Xbig">
+	    <link rel="stylesheet" switch="css/css/contraste-grande.css"  id="con_big">
+	    <link rel="stylesheet" switch="css/css/grande.css"  id="big"> 
+	    <link rel="stylesheet" switch="css/css/x-grande.css"  id="Xbig">
+        <link rel="stylesheet" href="css/fontello.css">
+        <!--Fuentes-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+        <!--JavaScript-->
+        <script src="js/codigo.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="indexRegistrado.html"><img src="img/logoPag.png" alt="Logo" title="PI - Pictures &amp; Images"></a> <!--Logo del sitio-->
+            <nav class="barraBusqueda">
+                <form method="GET" action="no_resultadoRegistrado.html"> <!--Formulario de búsqueda-->
+                    <input type="search" placeholder="Encuentra una fotografía...">
+                    <button class="boton" title="Buscar"><span class="icon icon-search"></span></button>
+                </form>
+                <a href="buscar.html" title="Búsqueda avanzada"><span class="icon icon-filter"></span></a>
+            </nav>
+            <nav class="botonesCabecera">
+<a href="estilo.html">Estilo</a>
+		<a href="foto.html">Foto aleatoria</a>
+            	<a href="subir.html">Subir foto</a>
+            </nav>
+
+
+            <nav class="dropdown"> <!--Menú desplegable del usuario-->
+                <span class="icon icon-user-circle-o iconoUsuario">
+                    <span class="icon icon-down-open"></span>
+                </span>
+                <ul class="drop-content">
+                    <li><a href="usuario.html">Mi perfil</a></li>
+                    <li><a href="album.html">Mis álbumes</a></li>
+                    <li><a href="album.html">Nuevo álbum</a></li>
+                    <li><a href="solicitud.html">Imprimir álbum</a></li>
+                    <li><a href="index.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            <main>
+                <section> <!--Últimas fotos-->
+                    <h1>Detalles</h1>
+                    <article id="ArtFoto">
+                        <header>
+                            <h2> Título de Foto</h2>
+                        </header>
+
+                        <figure>
+                            <img src="img/foto2.jpg" alt="Foto">
+                        </figure>
+                        <p class="ForzarP_Medio">
+                        <time datetime="2009-08-06 22:00:22">el 8 jun 2009 a las 22:00</time>
+                        <span>Alicante, España</span>
+                        </p>
+                        <h3>Descripción</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget sit amet tellus cras adipiscing enim eu turpis. Tortor consequat id porta nibh. Non arcu risus quis varius.</p>
+                        <h3>Álbumes</h3>
+                        <p><a href="album.html">Álbum: Fotos en mi ciudad</a></p>
+
+                        <h3>Autor</h3>
+                        <p>
+                            <span class="autoria">Foto subida por&nbsp;
+                                <a href="usuario.html">
+                                    <img class="miniaturaPerfil" src="img/perfil.jpg" alt="Foto de perfil de usuario">
+                                    &nbsp;Jean Pierre
+                                </a>
+                            </span>
+                        </p>
+                        <footer>
+
+                        </footer>
+                    </article>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <p>&copy; <time datetime="2021">2021</time></p>
+            <div>
+                <dl class="autores">
+                    <dt>Autor</dt>
+                    <dd>Daniel Giménez López-Torres</dd>
+                </dl>
+                <dl>
+                    <dt>Sobre la página</dt>
+		            <dd><a href="accesibilidad.html">Accesibilidad</a></dd>
+                    <dd><a href="">Política de privacidad</a></dd>
+                    <dd><a href="">Contacto</a></dd>
+                </dl>
+                <dl>
+                    <dt>Redes sociales</dt>
+                    <dd><a href="">Twitter</a></dd>
+                    <dd><a href="">Facebook</a></dd>
+                </dl>
+            </div>
+        </footer>
+    </body>
+</html>

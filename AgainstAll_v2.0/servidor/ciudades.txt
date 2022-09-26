@@ -1,0 +1,38 @@
+104515;La Meca
+292223;Dubai
+292968;Abu Dhabi
+360630;El Cairo
+524894;Moscu
+745044;Estambul
+792680;Belgrado
+1261481;Nueva Delhi
+1609348;Bangkok
+1816670;Pekin
+1819729;Hong Kong
+1850147;Tokio
+1880252;Singapore
+2013159;Yakutsk
+2147714;Sidney
+2462881;Laayoune
+2521978;Alicante
+2643743;Londres
+2673722;Estocolmo
+2759794;Amsterdam
+2800866;Bruselas
+2950158;Berlin
+3067696;Praga
+3117735;Madrid
+3128760;Barcelona
+3169070;Roma
+3421319;Nuuk
+3433955;Buenos Aires
+3451189;Rio de Janeiro
+3831208;Qaanaaq
+4229546;Washington
+5128581;Nueva York
+5368361;Los Angeles
+5475433;Las Vegas
+6167865;Toronto
+6453366;Oslo
+6455259;Paris
+7778677;Dublin

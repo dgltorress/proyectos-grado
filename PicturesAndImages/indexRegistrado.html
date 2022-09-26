@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!--
+ARCHIVO: indexRegistrado.html
+Versión de la página principal con la sesión iniciada.
+
+AUTORES: Daniel Giménez el 30/09/2021
+
+REVISIONES:
+11/10/2021 Adaptado para CSS
+-->
+<html lang="es">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="generator" content="Visual Studio Code">
+		<meta name="author" content="Daniel Giménez">
+		<meta name="keywords" content="Fotos, imágenes, compartir">
+        <meta name="description" content="Comparte tus fotos con otros usuarios.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PI - Pictures &amp; Images</title>
+		<!--Icono-->
+		<link rel="icon" href="img/logo.png">
+        <!--CSS-->
+        <link rel="stylesheet" href="css/css/estilo.css" switch="css/css/estilo.css"  id="default"> 
+        <link rel="stylesheet" href="css/css/impresa.css" media="print" id="print">
+        <link rel="stylesheet" switch="css/css/noche.css"  id="night">
+	    <link rel="stylesheet" switch="css/css/contraste-bajo.css"  id="low">
+	    <link rel="stylesheet" switch="css/css/contraste-x-grande.css"  id="con_Xbig">
+	    <link rel="stylesheet" switch="css/css/contraste-grande.css"  id="con_big">
+	    <link rel="stylesheet" switch="css/css/grande.css"  id="big"> 
+	    <link rel="stylesheet" switch="css/css/x-grande.css"  id="Xbig">
+        <link rel="stylesheet" href="css/fontello.css">
+        <!--Fuentes-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+        <!--JavaScript-->
+        <script src="js/codigo.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="indexRegistrado.html"><img src="img/logoPag.png" alt="Logo" title="PI - Pictures &amp; Images"></a> <!--Logo del sitio-->
+            <nav class="barraBusqueda">
+                <form method="GET" action="no_resultadoRegistrado.html"> <!--Formulario de búsqueda-->
+                    <input type="search" placeholder="Encuentra una fotografía...">
+                    <button class="boton" title="Buscar"><span class="icon icon-search"></span></button>
+                </form>
+                <a href="buscar.html" title="Búsqueda avanzada"><span class="icon icon-filter"></span></a>
+            </nav>
+
+            <nav class="botonesCabecera">
+<a href="estilo.html">Estilo</a>
+                <a href="foto.html">Foto aleatoria</a>
+                <a href="subir.html">Subir foto</a>
+            </nav> 
+
+            <nav class="dropdown"> <!--Menú desplegable del usuario-->
+                <span class="icon icon-user-circle-o iconoUsuario">
+                    <span class="icon icon-down-open"></span>
+                </span>
+                <ul class="drop-content">
+                    <li><a href="usuario.html">Mi perfil</a></li>
+                    <li><a href="album.html">Mis álbumes</a></li>
+                    <li><a href="album.html">Nuevo álbum</a></li>
+                    <li><a href="solicitud.html">Imprimir álbum</a></li>
+                    <li><a href="index.html">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="divIndice">
+            <main>
+                <section> <!--Últimas fotos-->
+                    <div class="headerYMensaje">
+                        <h1>Más recientes</h1>
+                        <div>
+                            <label for="ord">Ordenar por</label>
+                            <select id="ord" name="ordenacion" style="width:max-content;"
+                                    onchange="reordenarArticulos( this , false );">
+                                <option value="">---</option>
+                                <option value="1">Título (A-Z)</option>
+                                <option value="2">Título (Z-A)</option>
+                                <option value="3">Fecha</option>
+                                <option value="4">Autor</option>
+                                <option value="5">País</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="fotosRecientes">
+                        <article class="fotoReciente">
+                            <header>
+                                <a href="error.html">
+                                    <h2>Anochecer en París</h2>
+                                </a>
+                                <span class="autoria">Por&nbsp;
+                                    <a href="usuario.html">
+                                        <img class="miniaturaPerfil" src="img/perfil.jpg" alt="Foto de perfil de usuario">&nbsp;Blanca
+                                    </a>
+                                    &nbsp;el&nbsp;<time datetime="2021-01-23 19:54:32">23 de enero de 2021 a las 19:54</time>
+                                </span>
+                            </header>
+                            <a href="error.html" class="figura">
+                                <figure>
+                                    <img src="img/foto1.jpg" alt="Miniatura de foto">
+                                </figure>
+                            </a>
+                            <footer>
+                                <span><span class="icon icon-location"></span>Francia</span>
+                                <button class="boton" type="button"><span class="icon icon-export"></span></button>
+                            </footer>
+                        </article>
+                        <article class="fotoReciente">
+                            <header>
+                                <a href="error.html">
+                                    <h2>Perspectiva del Ojo de Londres</h2>
+                                </a>
+                                <span class="autoria">Por&nbsp;
+                                    <a href="usuario.html">
+                                        <img class="miniaturaPerfil" src="img/perfil.jpg" alt="Foto de perfil de usuario">&nbsp;Alberto
+                                    </a>
+                                    &nbsp;el&nbsp;<time datetime="2021-01-06 02:16:10">6 de enero de 2021 a las 02:16</time>
+                                </span>
+                            </header>
+                            <a href="error.html" class="figura">
+                                <figure>
+                                    <img src="img/foto2.jpg" alt="Miniatura de foto">
+                                </figure>
+                            </a>
+                            <footer>
+                                <span><span class="icon icon-location"></span>Inglaterra</span>
+                                <button class="boton" type="button"><span class="icon icon-export"></span></button>
+                            </footer>
+                        </article>
+                        <article class="fotoReciente">
+                            <header>
+                                <a href="error.html">
+                                    <h2>Un viaje por los EE.UU.</h2>
+                                </a>
+                                <span class="autoria">Por&nbsp;
+                                    <a href="usuario.html">
+                                        <img class="miniaturaPerfil" src="img/perfil.jpg" alt="Foto de perfil de usuario">&nbsp;Laura
+                                    </a>
+                                    &nbsp;el&nbsp;<time datetime="2020-08-08 08:08:08">8 de agosto de 2020 a las 08:08</time>
+                                </span>
+                            </header>
+                            <a href="error.html" class="figura">
+                                <figure>
+                                    <img src="img/foto3.jpg" alt="Miniatura de foto">
+                                </figure>
+                            </a>
+                            <footer>
+                                <span><span class="icon icon-location"></span>Estados Unidos</span>
+                                <button class="boton" type="button"><span class="icon icon-export"></span></button>
+                            </footer>
+                        </article>
+                        <article class="fotoReciente">
+                            <header>
+                                <a href="error.html">
+                                    <h2>La exposición del Atomium</h2>
+                                </a>
+                                <span class="autoria">Por&nbsp;
+                                    <a href="usuario.html">
+                                        <img class="miniaturaPerfil" src="img/perfil.jpg" alt="Foto de perfil de usuario">&nbsp;Juan
+                                    </a>
+                                    &nbsp;el&nbsp;<time datetime="2021-11-27 22:01:52">27 de noviembre de 2021 a las 22:01</time>
+                                </span>
+                            </header>
+                            <a href="error.html" class="figura">
+                                <figure>
+                                    <img src="img/foto4.jpg" alt="Miniatura de foto">
+                                </figure>
+                            </a>
+                            <footer>
+                                <span><span class="icon icon-location"></span>Bélgica</span>
+                                <button class="boton" type="button"><span class="icon icon-export"></span></button>
+                            </footer>
+                        </article>
+                        <article class="fotoReciente">
+                            <header>
+                                <a href="error.html">
+                                    <h2>Abu Dhabi soleada</h2>
+                                </a>
+                                <span class="autoria">Por&nbsp;
+                                    <a href="usuario.html">
+                                        <img class="miniaturaPerfil" src="img/perfil.jpg" alt="Foto de perfil de usuario">&nbsp;Pepe
+                                    </a>
+                                    &nbsp;el&nbsp;<time datetime="2021-06-15 15:15:15">15 de junio de 2021 a las 15:15</time>
+                                </span>
+                            </header>
+                            <a href="error.html" class="figura">
+                                <figure>
+                                    <img src="img/foto5.jpg" alt="Miniatura de foto">
+                                </figure>
+                            </a>
+                            <footer>
+                                <span><span class="icon icon-location"></span>Emiratos Árabes</span>
+                                <button class="boton" type="button"><span class="icon icon-export"></span></button>
+                            </footer>
+                        </article>
+                    </div>
+                </section>
+                <div class="paginado"> <!--Paginado-->
+                    <button class="boton" type="button">&laquo;</button>
+                    <button class="boton" type="button">&#8249;</button>
+                    <span>1</span>
+                    <button class="boton" type="button">&#8250;</button>
+                    <button class="boton" type="button">&raquo;</button>
+                </div>
+            </main>
+            <aside> <!--Barra lateral-->
+                <article> <!--Foto del día-->
+                    <header>
+                        <h2>Foto del día</h2>
+                        <span class="autoria flexCentrado"><time datetime="2000-01-01 19:00:32">1 ene 2000 a las 19:00</time></span>
+                    </header>
+                    <a href="foto.html" class="figura">
+                        <figure>
+                            <img src="img/foto1.jpg" alt="Miniatura de foto">
+                        </figure>
+                    </a>
+                    <footer>
+                        <span class="autoria">Por&nbsp;
+                            <a href="usuario.html">
+                                <img class="miniaturaPerfil" src="img/perfil.jpg" alt="Foto de perfil de usuario">&nbsp;Blanca
+                            </a>
+                        </span>
+                    </footer>
+                </article>
+                <div> <!--Etiquetas populares-->
+                    <header>
+                        <h2>Etiquetas populares</h2>
+                    </header>
+                    <ul class="etiquetas">
+                        <li><a href="">impactante</a></li>
+                        <li><a href="">tierno</a></li>
+                        <li><a href="">espectacular</a></li>
+                        <li><a href="">capital</a></li>
+                        <li><a href="">monumento</a></li>
+                        <li><a href="">de invierno</a></li>
+                        <li><a href="">navideña</a></li>
+                        <li><a href="">rural</a></li>
+                    </ul>
+                    <footer></footer>
+                </div>
+            </aside>
+        </div>
+        <footer>
+            <p>&copy; <time datetime="2021">2021</time></p>
+            <div>
+                <dl class="autores">
+                    <dt>Autor</dt>
+                    <dd>Daniel Giménez López-Torres</dd>
+                </dl>
+                <dl>
+                    <dt>Sobre la página</dt>
+		            <dd><a href="accesibilidad.html">Accesibilidad</a></dd>
+                    <dd><a href="">Política de privacidad</a></dd>
+                    <dd><a href="">Contacto</a></dd>
+                </dl>
+                <dl>
+                    <dt>Redes sociales</dt>
+                    <dd><a href="">Twitter</a></dd>
+                    <dd><a href="">Facebook</a></dd>
+                </dl>
+            </div>
+        </footer>
+    </body>
+</html>

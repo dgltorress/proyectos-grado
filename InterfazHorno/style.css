@@ -1,0 +1,290 @@
+
+/* VALORES GLOBALES */
+/* ===================================================== */
+
+:root{
+    --n1:#050505;
+    --n2:#0a0a0a;
+    --n3:#111;
+    --n4:#222;
+
+    --b1:#ddd;
+    --b2:#eee;
+    --b3:#fff;
+}
+
+@font-face {
+    font-family: digital7;
+    src: url(digital7.ttf);
+}
+
+*{
+    box-sizing:border-box;
+    font-family:digital7,Courier,"Lucida Console",monospace;
+    color:var(--b2);
+}
+
+/* _____________________________________________________ */
+
+
+
+
+
+/* ETIQUETAS GENERALES */
+/* ===================================================== */
+
+body{
+    background-color:var(--n3);
+
+    margin:0;
+    padding:0;
+}
+
+span,time,#entorno{
+	user-select:none;
+}
+
+svg,svg>image{
+    width:.4in;
+    height:.4in;
+}
+
+svg:not(.activo),span:not(.activo),time:not(.activo){
+	opacity:.4;
+}
+
+.interactuable{ cursor:pointer; }
+.permanente{ opacity:1 !important; }
+
+/* _____________________________________________________ */
+
+
+
+
+
+/* PANELES */
+/* ===================================================== */
+
+#interfaz{
+    position:absolute;
+    top:0; right:0; bottom:0; left:0;
+
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+
+    /* Pantalla 16:9 de 6 pulgadas */
+    width:5.24in;
+    height:2.95in;
+
+    border:1px solid var(--b2);
+    border-radius:.05in;
+    margin:auto;
+    padding:0;
+}
+#interfaz>div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    background-color:var(--n2);
+
+    padding:.1in;
+}
+
+
+
+#interfaz>div div,#interfaz>div nav{
+    display:flex;
+}
+#interfaz>div ul{
+    text-align:center;
+
+    list-style:none;
+
+    margin:0;
+    padding:0;
+}
+#interfaz>div ul>li{
+    font-family:Helvetica,Arial,sans-serif !important;
+    font-weight:bold;
+    font-size:12pt;
+}
+#interfaz>div ul>li:not(:first-child){
+    border-top:1px solid var(--b2);
+}
+
+/* _____________________________________________________ */
+
+
+
+
+/* PANEL IZQUIERDO */
+/* ===================================================== */
+
+#interfaz>div:first-child{
+    width:25%;
+    align-items:flex-start;
+    border-radius:.05in 0 0 .05in;
+}
+#interfaz>div:first-child>div{
+    flex-direction:row;
+    align-items:center;
+
+    margin:.1in 0;
+}
+#interfaz>div:first-child>div:last-child{
+    margin-top:.2in;
+	align-self:center;
+}
+#interfaz>div:first-child>div:last-child>svg{
+    margin:0;
+}
+#interfaz>div:first-child>div>span{
+    font-size:25pt;
+    text-align:left;
+
+    margin:0;
+}
+#interfaz>div:first-child>div>span>abbr{
+    font-family:Helvetica,Arial,sans-serif !important;
+    font-size:7pt;
+}
+
+#interfaz>div:first-child svg{
+    margin-right:.05in;
+}
+#interfaz>div:first-child>div:last-child>svg:first-child{
+    margin-right:-.03in;
+}
+
+
+/* _____________________________________________________ */
+
+
+
+
+
+/* PANEL CENTRAL */
+/* ===================================================== */
+
+#interfaz>div:nth-child(2){
+    width:50%;
+    align-items:center;
+    border-inline:1px solid var(--b2);
+    justify-content:space-between;
+}
+
+#indicadores{
+    flex-direction:column;
+    align-items:center;
+
+    font-size:50pt;
+}
+#indicadores>div:first-child>span{
+    display:flex;
+    align-items:center;
+}
+
+
+#controlesTiempo{
+    flex-direction:row;
+    align-items:center;
+	
+	line-height:12pt;
+}
+#controlesTiempo>*{
+    margin-inline:.15in;
+}
+#controlesTiempo>span             { font-size:55pt; }
+#controlesTiempo>span:nth-child(2){ font-size:30pt; }
+
+
+#opciones{
+    width:100%;
+
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+#funcionesModernas{
+    flex-direction:row;
+    align-items:flex-start;
+
+    margin-right:auto;
+}
+#funcionesModernas svg{
+    margin-inline:.04in;
+}
+#reloj{
+    font-size:27pt;
+    text-align:right;
+}
+
+/* _____________________________________________________ */
+
+
+
+
+
+/* PANEL DERECHO */
+/* ===================================================== */
+
+#interfaz>div:last-child{
+    width:25%;
+    align-items:center;
+    border-radius:0 .05in .05in 0;
+}
+#interfaz>div:last-child>div{
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+
+    margin:.1in 0;
+}
+
+#modoVentilador>svg,#modoVentilador>svg>image{
+    width:.6in;
+    height:.6in;
+}
+
+#modoResistencias{
+	position:relative;
+	flex-wrap:nowrap !important;
+}
+#modoResistencias>div{
+	flex-direction:column;
+    margin-inline:.05in;
+	
+	z-index:1;
+}
+#modoResistencias svg{
+    margin:.02in .05in;
+}
+#modoResistencias>svg{
+	position:absolute;
+	left:0;
+	top:0;
+	
+    fill:none !important;
+	stroke:currentColor;
+	stroke-width:3;
+	
+	width:100%;
+	height:100%;
+}
+
+#modoOtros>svg,#modoOtros>svg>image{
+    width:.3in;
+    height:.3in;
+}
+#modoOtros>svg{ margin:.03in; }
+
+#interfaz>div:last-child>span{
+    font-family:Helvetica,Arial,sans-serif;
+    margin:0;
+}
+
+
+/* _____________________________________________________ */

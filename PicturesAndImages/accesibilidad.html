@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+ARCHIVO: acceso.html
+Página con opciones de accesibilidad
+
+AUTORES: Daniel Giménez 21/10/2021
+
+REVISIONES:
+13/10/2021 Adaptada para CSS
+-->
+<html lang="es">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="generator" content="Visual Studio Code">
+		<meta name="author" content="Daniel Giménez">
+		<meta name="keywords" content="Acceso, cuenta">
+        <meta name="description" content="Inicia sesión en la página.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inicio de sesión - PI - Pictures &amp; Images.</title>
+		<!--Icono-->
+		<link rel="icon" href="img/logo.png">
+        <!--CSS-->
+        <link rel="stylesheet" href="css/css/estilo.css" switch="css/css/estilo.css"  id="default"> 
+        <link rel="stylesheet" href="css/css/impresa.css" media="print" id="print">
+        <link rel="stylesheet" switch="css/css/noche.css"  id="night">
+	    <link rel="stylesheet" switch="css/css/contraste-bajo.css"  id="low">
+	    <link rel="stylesheet" switch="css/css/contraste-x-grande.css"  id="con_Xbig">
+	    <link rel="stylesheet" switch="css/css/contraste-grande.css"  id="con_big">
+	    <link rel="stylesheet" switch="css/css/grande.css"  id="big"> 
+	    <link rel="stylesheet" switch="css/css/x-grande.css"  id="Xbig">
+        <link rel="stylesheet" href="css/fontello.css">
+        <!--Fuentes-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+        <!--JavaScript-->
+        <script src="js/codigo.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><img src="img/logoPag.png" alt="Logo" title="PI - Pictures &amp; Images"></a> <!--Logo del sitio-->
+            <nav class="barraBusqueda">
+                <form method="GET" action="no_resultado.html"> <!--Formulario de búsqueda-->
+                    <input type="search" placeholder="Encuentra una fotografía...">
+                    <button class="boton" title="Buscar"><span class="icon icon-search"></span></button>
+                </form>
+                <a href="buscar.html" title="Búsqueda avanzada"><span class="icon icon-filter"></span></a>
+            </nav>
+            <nav class="botonesCabecera">
+		<a href="estilo.html">Estilo</a>
+                <a href="acceso.html">Iniciar sesión</a> <!--Botones de acceso y registro-->
+                <a href="registro.html">Registrarse</a>
+            </nav>
+        </header>
+        <div>
+            <main>
+                <section class="accesibilidad"> <!--accsibilidad-->
+                    <h1 >Declaración de Accesibilidad</h1>
+                        <h2 >Introducción a la accesibilidad digital</h2>
+                            <p>La accesibilidad es el grado en el que todas las personas pueden percibir, comprender y navegar por la información contenida en un documento digital independientemente de sus capacidades técnicas, cognitivas o físicas.</p>
+                        <h2 >Declaración de accesibilidad de PI - Pictures &amp; Images</h2>
+                            <p>PI se ha comprometido a hacer accesible su sitio web en la mayor medida que sea posible. La presente declaración de accesibilidad se aplica a las páginas web del dominio https://testhsdufhwef34.000webhostapp.com.</p>
+                        <h2>Situación de Cumplimiento</h2>
+                            <h3>Colores</h3>
+                                <p>Por defecto, la página obtiene un a puntuación de 20.47, por lo que supera con creces el requisito AAA (<em>enhanced</em>) en el área de contraste. Por ende, hemos añadido como alternativa un estilo de bajo contraste para aquellos a quienes pueda mejorar la accesibilidad de la página.</p>
+                            <h3>Etiquetado semántico</h3>
+                                <p>Se ha realizado uso de las siguientes etiquetas con significado semántico en toda ocasión donde se ha visto necesario:
+                                    <ul style="list-style:square;margin-left:3em;">
+                                        <li>Una etiqueta &lt;header&gt; para contener el menú de navegación y la barra de búsqueda.</li>
+                                        <li>&lt;main&gt; para la sección principal de la página, &lt;aside&gt; para la barra lateral.</li>
+                                        <li>&lt;section&gt; y &lt;article&gt; para estructurar el contenido de la página.</li>
+                                        <li>Un &lt;footer&gt; que contiene datos de los creadores a sus redes sociales y a esta página.</li>
+                                    </ul>
+                                </p>
+                                <p>Además, se usa la etiqueta &lt;time&gt; para marcar fechas con el atributo <em>datetime</em>.</p>
+                            <h3>Texto alternativo de imágenes</h3>
+                                <p>Todas las imágenes que se han incluido en la página son indispensables para su correcto funcionamiento. Además, en todas las etiquetas &lt;img&gt; usadas se ha utilizado el atributo <em>alt</em> para definir una pequeña descripción en caso de que no se cargasen a la hora de visualizar la página o para lectores de pantalla.</p>
+                            <h3>Cómo activar hoja de estilo accesible</h3>
+                                <p>La página consta de 3 estilos alternativos generales: de bajo contraste, tamaño de fuente grande y tamaño de fuente muy grande. De estos se derivan otras dos combinaciones de cada estilo que modifica la fuente con el estilo de bajo contraste. Para activarlo en Firefox sigue los siguientes pasos:</p>
+                                    <p style="font-size: 1.2em;"><strong>Tecla F10 &gt;&gt; Ver &gt;&gt; Estilo de página &gt;&gt; [Nombre del estilo]</strong></p>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <p>&copy; <time datetime="2021">2021</time></p>
+            <div>
+                <dl class="autores">
+                    <dt>Autor</dt>
+                    <dd>Daniel Giménez López-Torres</dd>
+                </dl>
+                <dl>
+                    <dt>Sobre la página</dt>
+                    <dd><a href="">Política de privacidad</a></dd>
+                    <dd><a href="">Contacto</a></dd>
+                </dl>
+                <dl>
+                    <dt>Redes sociales</dt>
+                    <dd><a href="">Twitter</a></dd>
+                    <dd><a href="">Facebook</a></dd>
+                </dl>
+            </div>
+        </footer>
+    </body>
+</html>

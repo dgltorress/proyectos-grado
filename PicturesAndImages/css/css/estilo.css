@@ -1,0 +1,1074 @@
+/*
+ARCHIVO: estilo.css
+Estilo genérico para cabeceras y pies
+
+AUTORES: Ian Bucu y Daniel Giménez el 08/10/2021
+
+REVISIONES:
+*/
+
+
+
+/* Variables */
+/* ############################################################### */
+:root{
+    --tono1:#000;
+    --tono2:#333;
+    --tono3:#666;
+    --tono4:#bbb;
+    --tono5:#ddd;
+    --tono6:#fcfcfc;
+    --tono7:#fff;
+
+    --tonoA:#f4f4f4;
+    --tonoB:#eee;
+}
+/* --------------------------------------------------------------- */
+
+
+
+a{
+    text-decoration:none;
+}
+
+h1{
+    font-variant:small-caps;
+    font-size:3em;
+}
+
+body{
+    margin:0;
+    background-color:var(--tono5);
+}
+
+section{
+    display:flex;
+    flex-direction:column;
+}
+
+.icon{
+    text-align:center;
+    font-size:20px
+}
+
+.colorSample{
+    display:inline-block;
+
+    width:1em;
+    height:1em;
+
+    border:1px solid var(--tono1);
+    border-radius:5px;
+
+    margin:0 .6em 0 0;
+}
+
+.middleThead{
+    background-color:var(--tono1);
+    color:var(--tono7);
+
+    font-weight:bold;
+    font-variant:small-caps;
+}
+
+.filtros,.filtros>ul{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+    flex-wrap:wrap;
+
+    font-size:16px;
+}
+
+.filtros>header{
+    font-variant:small-caps;
+    font-size:20px;
+}
+
+.filtros>ul{
+    list-style:none;
+}
+
+.filtros>ul>li{
+    background-color:var(--tono5);
+    border-radius:10px;
+
+    margin-inline:.5em;
+    padding:.3em .6em .4em .6em;
+}
+
+
+/* Proporción de tamaño del contenido principal y la barra lateral */
+/* ############################################################### */
+main{
+    flex:5;
+}
+
+aside{
+    flex:2;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* Clase botón genérica */
+/* ############################################################### */
+
+.boton{
+    background-color:var(--tono5);
+    color:var(--tono1);
+    border:none;
+    border-radius:.5em;
+
+    cursor:pointer;
+}
+.boton:hover{background-color:var(--tono2);}
+.boton:active{background-color:var(--tono3);}
+
+.boton>span{color:var(--tono1);}
+.boton:hover,.boton:hover>span{color:var(--tono7);}
+.boton:active,.boton:active>span{color:var(--tono7);}
+
+.enlaceBoton{
+    display:block;
+
+    font-size:20px;
+    font-weight:bold;
+    font-variant:small-caps;
+    text-align:center;
+
+    padding:.5em;
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* Fotos de perfil redondas */
+/* ############################################################### */
+.miniaturaPerfil{
+    width:2em;
+    border-radius:100%;
+
+    margin:0 .4em 0 .2em;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* Contenedor de toda la página */
+/* ############################################################### */
+body>div{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:space-around;
+
+    border:2px solid var(--tono4);
+    border-top:none;
+    border-bottom:none;
+
+    background-color:var(--tono6);
+
+    margin:0 4em 0 4em;
+    padding:2em;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* Fuente genérica */
+/* ############################################################### */
+body *{
+    font-family:'Source Sans Pro',Helvetica,sans-serif;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* Estilo para la cabecera del cuerpo */
+/* ############################################################### */
+body>header{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    background-color:var(--tono1);
+    color:var(--tono7);
+    padding:.8em;
+    border-bottom:.4em solid var(--tono2);
+}
+
+body>header *{
+    color:var(--tono7);
+}
+
+body>header>a{
+    flex:2;
+    padding:0;
+    padding-left:2em;
+}
+
+body>header>* a{
+    display:flex;
+    align-items:center;
+    text-align:center;
+
+    font-size:1.1em;
+}
+
+body>header>*:not(.dropdown) a:hover{
+    margin:-1.2em 0 -1.2em 0;
+    background-color:var(--tono2);
+    transition:ease-in-out .2s;
+}
+
+body>header img{
+    max-height:2em;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* Estilo de la barra de búsqueda */
+/* ############################################################### */
+.barraBusqueda{
+    display:flex;
+    flex:3.5;
+}
+
+.barraBusqueda>form{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    flex:4;
+    margin-right:.2em;
+}
+
+.barraBusqueda>form>input{
+    flex:9;
+    font-size:1.1em;
+    color:var(--tono1);
+    padding:.2em;
+    padding-left:.4em;
+}
+.barraBusqueda>form>button{
+    flex:1;
+    color:var(--tono1);
+}
+
+.barraBusqueda>a{padding:0 .5em 0 .5em;}
+/* --------------------------------------------------------------- */
+
+
+
+/* Botones de la derecha */
+/* ############################################################### */
+.botonesCabecera{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    flex:3;
+}
+
+.botonesCabecera a{
+    padding:.6em;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* Dropdown al tener sesión iniciada */
+/* ############################################################### */
+.dropdown{
+    position: relative;
+    display: inline-block;
+    cursor:pointer;
+}
+
+.dropdown>span>span:first-child{
+    font-size:20px;
+    margin-right:.2em;
+}
+
+.drop-content{
+  display:none;
+  position: absolute;
+  background-color: var(--tono1);
+  padding: 0em;
+  min-width: 1.5em;
+  color:var(--tono6) ;
+  margin: 0%;
+}
+
+.dropdown:hover .drop-content{
+    display: block;
+    
+}
+
+.drop-content:hover{
+    display: block;
+}
+
+.drop-content>li{
+    display: block;
+    padding: 0.3em 0.8em 0.3em 0.8em;
+}
+
+.drop-content>li:hover{
+    background-color: var(--tono2);
+}
+
+.iconoUsuario{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+
+    font-size:45px;
+}
+/* --------------------------------------------------------------- */
+
+
+/* ESTILO PARA ARTÍCULOS */
+/* ################################################################################################ */
+.fotosRecientes{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+
+/* Artículo principal */
+/* ############################################################### */
+main article{
+    display:flex;
+    flex-direction:column;
+    /*border:1px solid black;*/
+
+    width:23em;
+    flex-grow:1;
+
+    margin-bottom:1em;
+}
+
+main article:after{ /*Borde inferior del contenedor de fotos con longitud limitada*/
+    content:"";
+    display:block;
+    margin:0 auto;
+    width:95%;
+    padding-top:0;
+    border-bottom:1px solid var(--tono5);
+}
+
+main article>header,main article>footer{
+    padding:.5em;
+}
+
+main article>header{flex-grow:.5;}
+
+main article header>a{
+    display:block;
+}
+
+main article header>a>h2{
+    display:inline-block;
+    background-color:var(--tono2);
+    color:var(--tono6);
+    font-size:1.5em;
+
+    margin:.2em;
+    margin-left:-.8em;
+    padding:.3em .6em .3em .6em;
+    border-radius:10px/50%;
+}
+main article header>a:hover>h2{
+    background-color:var(--tono1);
+    transition:ease-in-out .1s;
+}
+
+main article footer{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* Información sobre el autor y fecha */
+/* ############################################################### */
+.autoria,.autoria>a{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.autoria{
+    margin-top:.5em;
+    font-size:.95em;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* Modificaciones para la barra lateral */
+/* ############################################################### */
+aside .autoria{
+    justify-content:center;
+    font-size:1.1em;
+    margin-bottom:.5em;
+}
+
+aside .figura{
+    display:block;
+    margin:.6em 0 .6em 0;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* Contenedor para imágenes */
+/* ############################################################### */
+.figura{
+    margin:1em;
+    margin-top:.2em;
+
+    flex-grow:.5;
+
+    text-align:center;
+}
+figure{
+    display:inline-block;
+    border:1px solid var(--tono5);
+    border-radius:5px;
+
+    background:transparent;
+
+    margin:0;
+    padding:1em;
+}
+figure>img{
+    border-radius:5px;
+
+    width:100%;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* CSS exclusivo para el article en error.html */
+/* ############################################################### */
+#ArtError{
+    text-align: center;
+    width: 38em;
+    padding: 0.8em 2em 0.8em 2em;
+    margin:1em auto 1em auto;
+    background-color:var(--tonoA);
+
+    border:none;
+    border-radius:10px;
+}
+#ArtError:after{
+    border: none;
+
+}
+
+#ArtError>footer>a{
+    background-color:var(--tono1);
+    padding: 0.8em;
+    border:none;
+    border-radius:10px;
+    color: var(--tono6);
+
+}
+
+#ArtError>footer>a:hover{
+    background-color:var(--tono3);
+    padding: 0.8em;
+    border:none;
+    border-radius:10px;
+    color: var(--tono6);
+
+}
+/* --------------------------------------------------------------- */
+
+/* CSS exclusivo para el article en foto.html */
+/* ############################################################### */
+#ArtFoto{
+    width: 90%;
+    padding: 0.8em 2em 0.8em 2em;
+    margin:1em auto 1em auto;
+    background-color:var(--tonoA);
+    border:none;
+    border-radius:10px;
+}
+
+#ArtFoto:after{
+    border: none;
+
+}
+
+#ArtFoto>figure{
+    width: 38em;
+    margin: auto;
+}
+
+#ArtFoto>p{
+    margin: 1.2em 1em 1.2em 3em;
+}
+
+#ArtFoto>h3,#ArtFoto>header>h2{
+    background-color:var(--tono4);
+    color:var(--tono2);
+    font-size:1.3em;
+
+    margin:.2em;
+    margin-left:-.8em;
+    padding:.3em .6em .3em .6em;
+    border-radius:10px/50%;
+}
+
+#ArtFoto>p>.autoria{
+    font-size:1.1em;
+    margin: auto;
+}
+
+.ForzarP_Medio{
+    text-align: center;
+    margin: auto;
+}
+/* --------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------ */
+
+/* ESTILO PARA FORMULARIOS */
+/* ################################################################################################ */
+form:not(.barraBusqueda>form){
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    width:50%;
+    background-color:var(--tonoA);
+    border-radius:10px;
+
+    margin:1em auto 1em auto;
+    padding:.5em;
+}
+
+form>button:not(.barraBusqueda>form>button){
+    width:40%;
+    margin:1em auto 1em auto;
+    padding:.3em;
+    font-variant:small-caps;
+    font-size:1.2em;
+}
+
+.requerido{
+    font-weight:bold;
+    margin:1em 0 .8em .8em;
+}
+
+/* Campos de formulario */
+/* ############################################################### */
+fieldset{
+    text-align:left;
+    display:inline-block;
+
+    background-color:var(--tonoB);
+
+    border:none;
+    border-radius:10px;
+}
+
+fieldset>*{
+    display:flex;
+    flex-direction:column;
+}
+
+fieldset>fieldset{
+    background-color:var(--tono5);
+}
+
+fieldset>fieldset>*{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+legend{
+    font-size:1.6em;
+    font-variant:small-caps;
+    font-weight:bold;
+}
+/* --------------------------------------------------------------- */
+
+/* Elementos de formulario */
+/* ############################################################### */
+label{
+    margin:.3em 0 .5em .5em;
+}
+.casilla{
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+}
+.casilla>input{width:max-content !important;}
+
+textarea{
+    resize:vertical;
+}
+
+input[type="color"]{
+    padding:.1em !important;
+}
+input[type="date"]{
+    flex-direction:row;
+}
+
+input:not(.barraBusqueda>form>input),textarea,select{
+    width:90%;
+    padding:.5em;
+    margin-bottom:.8em;
+    margin-left:1em;
+
+    border:1px solid var(--tono4);
+    border-radius:4px;
+}
+
+input:not(.barraBusqueda>form>input):focus,textarea:focus{
+    border:1px solid var(--tono2);
+}
+
+.campoErroneo{
+    border-color:#b00 !important;
+    background-color:#fff3f3;
+}
+.mensajeError{
+    color:#600;
+    margin-left:1em;
+    margin-top:0;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* Formulario búsqueda avanzada */
+/* ############################################################### */
+#formBuscar>fieldset>label>input[type="checkbox"]{
+    margin: auto;
+    width:3em;
+}
+#formBuscar>fieldset>label{
+    display: inline-block;
+}
+/* --------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------ */
+
+
+/* ESTILO PARA TABLAS */
+/* ################################################################################################ */
+/* ############################################################### */
+table{
+    border-collapse:separate;
+    border-radius:5px;
+
+    background-color:var(--tono4);
+    width:100%;
+}
+
+td{
+    padding:.5em;
+    text-align:center;
+
+    background-color:var(--tonoA);
+
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+table:not(#TabPrecios) tr>td:last-child{
+    text-align:right;
+}
+
+caption,thead>tr,.filaConcepto{
+    background-color:var(--tono2);
+    color:var(--tono7);
+
+    text-align:center;
+    font-weight:bold;
+    font-variant:small-caps;
+}
+
+caption{
+    border-radius:10px 10px 0 0;
+    background-color:var(--tono1);
+}
+#TabPrecios{
+    margin-top: 1em;
+}
+
+/* --------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------ */
+
+
+/* ESTILO PARA LA PÁGINA DE ÍNDICE */
+/* ################################################################################################ */
+/* ############################################################### */
+#divIndice>main,#divIndice>aside{
+    margin:1em;
+}
+
+.headerYMensaje>h1,.headerYMensaje>p{ display:inline-block; }
+.headerYMensaje>p{ float:right; }
+
+#divIndice>aside h1{
+    font-size:28px;
+}
+#divIndice>aside h2{
+    font-variant:small-caps;
+    padding:.4em;
+}
+#divIndice>aside>article,#divIndice>aside>div{
+    padding:0;
+    border-bottom:2px solid var(--tono5);
+}
+#divIndice>aside>*>*{
+    margin:0;
+}
+#divIndice>aside>article>header>h2{
+    border-left:.5em solid var(--tono3);
+    background-color:var(--tono5);
+}
+#divIndice>aside>div>header>h2{
+    border-left:.5em solid var(--tono3);
+    background-color:var(--tono5);
+}
+#divIndice>aside footer{
+    margin-bottom:.8em;
+}
+
+.consejo{
+    font-size:16px;
+    padding-bottom:1em;
+}
+.consejo>p:nth-child(2){
+    font-style:italic !important;
+    line-height:1.6;
+
+    margin-bottom:1.5em !important;
+}
+.consejo>p{
+    margin:.6em 0 .9em 0 !important;
+}
+.consejo>p>span{
+    background-color:var(--tono5);
+    border-radius:10px;
+
+    font-weight:bold;
+
+    margin-inline:.3em;
+    padding:.3em;
+}
+.consejo .dif1{ background-color:#3A3; }
+.consejo .dif2{ background-color:#d91; }
+.consejo .dif3{ background-color:#B22; }
+/* --------------------------------------------------------------- */
+
+/* Contenedor de enlaces */
+/* ############################################################### */
+.etiquetas{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+
+    list-style:none;
+    padding-inline-start:0;
+}
+.etiquetas>li{
+    margin:0 .4em 0 .4em;
+}
+/* --------------------------------------------------------------- */
+
+/* Botones de paginación */
+/* ############################################################### */
+.paginado{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+.paginado>*{margin:0 .3em 0 .3em;}
+.paginado>span{font-size:1.8em;}
+.paginado>button{
+    font-size:30px;
+    padding:0 .4em .2em .4em;
+}
+/* --------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------ */
+
+
+/* ESTILO PARA LA PÁGINA DE USUARIO */
+/* ################################################################################################ */
+/* ############################################################### */
+
+#perfil{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+
+    margin:2em 0 0 2em;
+}
+
+#perfil>div{
+    text-align:center;
+}
+
+#perfil>div>p:nth-child(2){font-size:20px;}
+
+#perfil>div>img{
+    border-radius:100%;
+    width:350px;
+    height:350px;
+}
+
+#perfil>nav{
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+
+    list-style:none;
+
+    font-size:18px;
+
+    padding:0;
+    margin:0 2em 2em 4em;
+}
+#perfil>nav>a{
+    border-top:1px solid var(--tono1);
+    color:var(--tono0);
+    text-align:center;
+
+    padding:.5em 2em .5em 2em;
+}
+#perfil>nav>a:first-child{
+    border-top:1px solid rgba(0,0,0,0);
+}
+#perfil>nav>a:hover{
+    background-color:var(--tono3);
+    color:var(--tono7);
+    transition:ease-in-out .1s;
+}
+
+/* --------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------ */
+
+
+/* Estilo para el pie del cuerpo */
+/* ############################################################### */
+body>footer{
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+
+    background-color:var(--tono1);
+    border-top:3px solid var(--tono2);
+    padding:.5em 8em .5em 8em;
+}
+
+body>footer *{
+    color:var(--tono7);
+}
+
+body>footer>div{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+
+    margin-left:9em;
+}
+
+body>footer>div>dl{
+    margin:1em;
+    padding:.8em;
+
+    border-inline:solid 1px var(--tono2);
+    border-radius:3px;
+}
+
+body>footer>div>dl>dt{
+    color:var(--tono3);
+    margin-bottom:.8em;
+    font-weight:bold;
+}
+
+.autores>dd{color:var(--tono3);}
+
+body>footer>div>dl>dd{
+    margin-inline-start: 20px;
+}
+
+body>footer>div>dl>dd,body>footer>div>dl>dd>a{
+    color:var(--tono4);
+
+    margin-bottom:.3em;
+}
+
+body>footer>div>dl>dd>a:hover{
+    color:var(--tono5);
+}
+/* --------------------------------------------------------------- */
+
+/* Estilo para headrs en la pagina "accesibilidad" */
+/* ############################################################### */
+.accesibilidad>h1{
+    border-left:.5em solid var(--tono3);
+    background-color:var(--tono5);
+    padding:  .45em;;
+}
+.accesibilidad>h2{
+    border-left:.5em solid var(--tono3);
+    background-color:var(--tono5);
+    margin-left: 1.2em;
+    padding:  .45em;;
+}
+.accesibilidad>h3{
+    border-left:.5em solid var(--tono3);
+    background-color:var(--tono5);
+    margin-left: 2.5em;
+    padding:  .45em;
+}
+.accesibilidad>p{
+    margin-left: 3.5em;
+}
+/* --------------------------------------------------------------- */
+
+
+/* Estilo para álbumes o menús de fotos */
+/* ############################################################### */
+
+.descripcionAlbum{
+    font-style:italic;
+}
+
+.descripcionAlbum::before{content: "“";margin-right:.2em;}
+.descripcionAlbum::after{content: "”";}
+.descripcionAlbum::before,.descripcionAlbum::after{
+    color:var(--tono4);
+    font-size:40px;
+    font-weight:bold;
+
+    vertical-align:middle;
+}
+
+.datoCantidad{
+    text-align:center;
+}
+
+.datoCantidad>span{
+    display:inline-block;
+
+    font-size:20px;
+    font-variant:small-caps;
+
+    border:1px solid var(--tono4);
+    border-radius:4px;
+
+    padding:.5em;
+    margin-bottom:1em;
+}
+
+/* --------------------------------------------------------------- */
+
+
+/* Estilo para mensajes modales o alertas */
+/* ############################################################### */
+
+#mensajeModal{
+    top:0;
+    left:0;
+    z-index:1;
+    width:100%;
+    height:100%;
+    overflow:auto;
+    position:fixed;
+    background-color:rgba(0,0,0,.2);
+
+    margin:0;
+    padding:0;
+    border:none;
+}
+
+#mensajeModal>article{
+    background-color:var(--tono7);
+    margin:auto;
+    width:25em;
+    max-width:50%;
+    text-align:center;
+    box-shadow:0 0 1.5px #666;
+    border-radius:5px;
+    
+    margin-top:12%;
+}
+
+#mensajeModal>article>*{
+    padding:.5em 1em .5em 1em;
+}
+
+#mensajeModal>article>header{
+    font-size:20px;
+    font-weight:bold;
+    margin:auto;
+}
+
+#mensajeModal>article>header:after{
+    content:"";
+    display:block;
+    margin:0 auto;
+    width:95%;
+    padding-top:.5em;
+    border-bottom:1px solid var(--tono4);
+}
+
+#mensajeModal>article>footer{
+    padding-bottom:1em;
+}
+
+#mensajeModal>article>footer>button{
+    padding:.5em 1em .5em 1em;
+    font-weight:bold;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Estilo para la lista en configurar */
+/* ############################################################### */
+#Estilo{
+    margin:auto;
+
+}
+#Estilo::after{
+    border-bottom:none;
+
+}
+#Estilo>dl{
+    text-align:center;
+    background-color: var(--tonoA);
+    border-radius: 0.5em;
+    padding:.5em 1em .5em 1em;
+}
+#Estilo>dl>dt{
+    padding:.5em 1em .5em 1em;
+    font-size: 1.1em;
+    font-weight:bold;
+    
+}
+
+
+/* --------------------------------------------------------------- */

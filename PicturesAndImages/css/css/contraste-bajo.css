@@ -1,0 +1,75 @@
+@import "estilo.css";
+
+/* Color de textos */
+/* ############################################################### */
+
+*{ color:#ccc !important; }
+
+a      { color:#cbd !important; }
+a:hover{ color:#ccc !important; }
+
+body>header a      { color:#ccc !important; }
+body>footer a      { color:#aaa !important; }
+
+.barraBusqueda>form>input{ color:#777 !important; }
+.autores dd{ color:#aaa !important; }
+
+/* --------------------------------------------------------------- */
+
+
+
+/* Fondos transparentes */
+/* ############################################################### */
+
+input:not(.barraBusqueda>form>input),textarea,select{
+    background-color:transparent;
+    border:1px solid var(--tono7);
+}
+
+body>header,body>div,body>footer{
+    background:transparent;
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* Color de bordes y fondos */
+/* ############################################################### */
+
+body{
+    background:#999;
+}
+
+#divIndice>aside>article>header>h2,#divIndice>aside>div>header>h2{
+    border-left:.5em solid var(--tonoB);
+    background-color:var(--tono5);
+}
+
+main article header>a>h2{
+    border:1px solid var(--tonoB) !important;
+    background-color: var(--tono4);
+}
+main article header>a>h2{
+    border:1px solid var(--tonoB) !important;
+    background-color: var(--tono4);
+}
+main article header>a>h2:hover{
+    background-color:#dedede;
+}
+
+body>header{ border-bottom:.4em solid var(--tonoB); }
+body>footer{    border-top:.4em solid var(--tonoB); }
+
+body>footer>div>dl{
+    border-inline:solid 1px var(--tono7) !important;
+}
+
+body>header>*:not(.dropdown) a:hover{
+    background-color:var(--tonoB);
+}
+
+.boton:hover{background-color:var(--tono5);}
+.boton:active{background-color:#dedede;}
+
+/* --------------------------------------------------------------- */

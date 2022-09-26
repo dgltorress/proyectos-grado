@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Interfaz accesible para un horno</title>
+        <meta name="author" content="Daniel Giménez López-Torres">
+        <meta name="keywords" content="interfaz,horno,usabilidad,accesibilidad">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+        <script src="code.js"></script>
+    </head>
+    <body>
+        <main>
+            <div id="interfaz">
+                <div>
+                    <div>
+                        <svg><image href="svg/sensorTempInterna.svg"/></svg>
+                        <span>0</span>
+						<span>0</span>
+						<span>0</span>
+						<span>&deg;</span>
+                    </div>
+                    <div>
+                        <svg><image href="svg/sensorTempAlimento.svg"/></svg>
+                        <span>0</span>
+						<span>0</span>
+						<span>0</span>
+						<span>&deg;</span>
+                    </div>
+                    <div>
+                        <svg><image href="svg/sensorEnergia.svg"/></svg>
+                        <span>0</span>
+						<span>.</span>
+						<span>0</span>
+						<span><abbr title="kilovatios por hora">kW/h</abbr></span>
+                    </div>
+                    <div>
+                        <svg><image href="svg/sensorProximidad.svg"/></svg>
+                        <svg><image href="svg/sensorPuertaAbierta.svg"/></svg>
+                    </div>
+                </div>
+                <div>
+                    <div id="indicadores">
+                        <div>
+							<span>0</span>
+							<span>0</span>
+						    <span>0</span>
+							<span>&deg;</span>
+						</div>
+                        <div>
+							<span>0</span>
+							<span>0</span>
+							<span>:</span>
+						    <span>0</span>
+							<span>0</span>
+						</div>
+                    </div>
+                    <nav id="controlesTiempo">
+                        <span>
+                            <ul lang="en">
+                                <li>START</li>
+                                <li>STOP</li>
+                            </ul>
+                        </span>
+                        <span>x</span>
+                        <span>-</span>
+                        <span>+</span>
+                    </nav>
+                    <div id="opciones">
+                        <nav id="funcionesModernas">
+                            <svg><image href="svg/funcionWifi.svg"/></svg>
+                            <svg><image href="svg/funcionAltavoz.svg"/></svg>
+                            <svg><image href="svg/funcionMicro.svg"/></svg>
+                        </nav>
+                        <div id="reloj"><time datetime="00:00">00:00</time></div>
+                    </div>
+                </div>
+                <div>
+                    <div id="modoVentilador">
+                        <svg class="interactuable" onclick="toggleVentilador();"><image href="svg/modoVentilador.svg"/></svg>
+                    </div>
+                    <div id="modoResistencias">
+						<svg>
+							<polyline points="47,5 52,5 52,55 58,55"/>
+							<polyline points="47,70 58,70"/>
+						</svg>
+						<div>
+							<svg><image href="svg/modoResSuperior.svg"/></svg>
+							<svg><image href="svg/modoResInferior.svg"/></svg>
+						</div>
+						<div>
+							<svg><image href="svg/modoGratinar.svg"/></svg>
+                            <svg><image href="svg/modoRes.svg"/></svg>
+						</div>
+                    </div>
+                    <div id="modoOtros">
+                        <svg><image href="svg/modoLuzInterna.svg"/></svg>
+                        <svg><image href="svg/modoDescongelar.svg"/></svg>
+                        <svg><image href="svg/modoPizza.svg"/></svg>
+                    </div>
+                    <span id="botonApagar"><svg><image href="svg/botonApagar.svg"/></svg></span>
+                </div>
+            </div>
+			<div id="entorno">
+				<div>
+					<label for="proximidad">Proximidad</label>
+					<input id="proximidad" type="range" oninput="actualizarProximidad( this.value );" min=".5" max="5" step=".5" value="5"/>
+					<span class="permanente"></span>
+				</div>
+				<div>
+					<label for="abrirPuerta">Abrir puerta</label>
+					<input id="abrirPuerta" type="checkbox" oninput="actualizarPuertaAbierta( this.checked );"/>
+				</div>
+			</div>
+        </main>
+		<script>
+			setBotonApagar();
+			actualizarProximidad   ( document.getElementById( 'proximidad'  ).value );
+			actualizarPuertaAbierta( document.getElementById( 'abrirPuerta' ).value );
+			document.body.lastElementChild.remove();
+		</script>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+/*
+ARCHIVO: impresa.css
+Estilo genérico para la versión impresa de la página
+
+AUTORES: Daniel Giménez el 15/10/2021
+
+REVISIONES:
+20/10/2021 Expandido
+*/
+
+
+/* CSS "reset" (versión para página impresa) */
+/* ############################################################### */
+*{
+  background: transparent !important;
+  color: #000 !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+/* --------------------------------------------------------------- */
+
+/* Etiquetas genéricas */
+/* ############################################################### */
+a{
+  text-decoration:underline;
+}
+
+article{
+  display:block !important;
+  break-inside:avoid !important;
+  width:50% !important;
+  max-width:50% !important;
+}
+
+article>*{
+  display:block !important;
+}
+
+img{
+  display:block !important;
+  break-inside:avoid !important;
+}
+
+#divIndice{
+  padding:2pt 10pt 10pt 5pt!important;
+  flex-direction:column !important;
+}
+
+figure{
+  padding:5pt !important;
+}
+
+.paginado{
+  display:block !important;
+  text-align:center;
+}
+
+aside{
+  display:block !important;
+  margin-top:100pt !important;
+}
+aside>article,aside>div{ width:45% !important; }
+aside>article{ float:left; }
+aside>div{ float:right; }
+
+body>header{
+  break-after:avoid !important;
+  border-bottom:1pt solid #000!important;
+}
+
+body *{
+  font-family:'Roboto Slab',Georgia,Times,serif;
+  font-size:8pt !important;
+}
+/* --------------------------------------------------------------- */
+
+/* Logo oscuro */
+/* ############################################################### */
+img[alt="Logo"]{
+  content:url("../../img/logoPagOscuro.png");
+}
+/* --------------------------------------------------------------- */
+
+/* Información a ocultar */
+/* ############################################################### */
+.botonesCabecera,
+.barraBusqueda,
+.dropdown>.icon>.icon,
+.headerYMensaje>p,
+article button{
+  display:none;
+}
+/* --------------------------------------------------------------- */
+
+/* Tamaños de fuente */
+/* ############################################################### */
+h1{font-size:22pt !important;}
+h2{font-size:12pt !important;}
+
+.icon{font-size:17pt !important}
+
+.iconoUsuario{font-size:25pt !important;}
+
+.paginado *{font-size:12pt !important;}
+/* --------------------------------------------------------------- */

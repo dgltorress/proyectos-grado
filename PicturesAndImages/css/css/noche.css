@@ -1,0 +1,85 @@
+@import "estilo.css";
+
+/* Sobrecarga de colores */
+/* ############################################################### */
+:root{
+    --tono1:#000;
+    --tono2:#111;
+    --tono3:#222;
+    --tono4:#333;
+    --tono5:#444;
+    --tono6:#555;
+    --tono7:#666;
+
+    --tonoA:#333;
+    --tonoB:#444;
+}
+/* --------------------------------------------------------------- */
+
+
+
+/* Color de textos */
+/* ############################################################### */
+
+*{ color:#fff !important; }
+
+a      { color:#acf !important; }
+a:hover{ color:#fff !important; }
+
+body>header a      { color:#fff !important; }
+body>footer a      { color:#ccc !important; }
+
+.barraBusqueda>form>input{ color:#000 !important; }
+.autores dd{ color:#888 !important; }
+
+/* --------------------------------------------------------------- */
+
+
+
+/* Fondos transparentes */
+/* ############################################################### */
+
+input:not(.barraBusqueda>form>input),textarea,select{
+    background-color:transparent;
+    border:1px solid var(--tono7);
+}
+
+body>header,body>div,body>footer{
+    background:transparent;
+}
+
+/* --------------------------------------------------------------- */
+
+
+
+/* Color de bordes y fondos */
+/* ############################################################### */
+
+body{
+    background:var(--tono2);
+}
+
+#divIndice>aside>article>header>h2,#divIndice>aside>div>header>h2{
+    border-left:.5em solid var(--tono4);
+    background-color:var(--tono3);
+}
+
+main article header>a>h2{
+    border:1px solid var(--tono4) !important;
+}
+
+body>header{ border-bottom:.4em solid var(--tono4); }
+body>footer{    border-top:.4em solid var(--tono4); }
+
+body>footer>div>dl{
+    border-inline:solid 1px var(--tono6) !important;
+}
+
+body>header>*:not(.dropdown) a:hover{
+    background-color:var(--tono4);
+}
+
+.boton:hover{background-color:var(--tono3);}
+.boton:active{background-color:var(--tono4);}
+
+/* --------------------------------------------------------------- */
