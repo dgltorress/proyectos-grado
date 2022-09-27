@@ -1,0 +1,21 @@
+Autor
+=======
+
+Daniel Giménez López-Torres
+
+
+
+Usuario administrador de la base de datos (se crea en el script)
+===================================================================
+
+Usuario: piadmin - Contraseña: clave
+
+
+
+Usuarios de prueba en el sitio web
+====================================
+
+Usuario: Pepe - Contraseña: AAaaaa3
+Usuario: Sara - Contraseña: AAaaaa3
+Usuario: Juan - Contraseña: AAaaaa3
+Usuario: Alba - Contraseña: AAaaaa3

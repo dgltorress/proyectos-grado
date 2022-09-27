@@ -1,0 +1,22 @@
+{
+    "consejos": [
+    {
+        "id": "1",
+        "categoria": "Material",
+        "dificultad": "Fácil",
+        "consejo": "Tener un trípode puede aportarte un montón de ventajas, tanto para las fotografías de interior como para las de exterior."
+    },
+    {
+        "id": "2",
+        "categoria": "Ajustes",
+        "dificultad": "Media",
+        "consejo": "Experimenta con los ajustes de la cámara, lee el manual de instrucciones para descifrar todos esos pequeños símbolos que tiene tu cámara."
+    },
+    {
+        "id": "3",
+        "categoria": "Ajustes",
+        "dificultad": "Alta",
+        "consejo": "La profundidad de campo se controla con los tres parámetros principales de una fotografía: diafragma, distancia al sujeto y distancia focal."
+    }
+    ]
+}

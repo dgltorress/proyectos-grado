@@ -1,0 +1,64 @@
+AUTOR
+========
+Daniel Giménez López-Torres
+
+
+USUARIOS WORDPRESS (SITIO WEB)
+================================
+
+Usuario administrador de WordPress:
+GBadmin
+
+Contraseña:
+22pMvSRHbK67
+
+---
+
+Usuario editor:
+GBeditor
+
+Contraseña:
+J2zqSFZKzxfm
+
+---
+
+Usuario promotor:
+GBpromotor
+
+Contraseña:
+9YEDTP3vbZMh
+
+---
+
+Usuario cliente 1:
+GBcliente1
+
+Contraseña
+DmxGDcPXR9da
+
+---
+
+Usuario cliente 2:
+GBcliente2
+
+Contraseña
+T4xz6T6g85cq
+
+---
+
+Usuario cliente 3:
+GBcliente3
+
+Contraseña
+7Q8MeEM5ve7h
+
+
+USUARIOS WORDPRESS (BASE DE DATOS)
+====================================
+
+Usuario administrador de la base de datos de WordPress:
+GBdbadmin
+
+Contraseña:
+J2zqSFZKzxfm
+
